@@ -1,18 +1,14 @@
 const accept = document.getElementById('accept');
 const cancel = document.getElementById('cancel');
 
-let addDays = (theDate, days) => {
-    return new Date(theDate.getTime() + 60*1000);
-}
+const MILISECONDS_IN_DAY = 24*60*60*1000;
+const addDays = (date, days) => new Date(date.getTime() + days*MILISECONDS_IN_DAY);
 
-let setCookie = (name, value) => {
-    let date = new Date();
-    let expires = addDays(date, 1);
+const setCookie = (name, value) => {
+    const date = new Date();
+    const expires = addDays(date, 1);
     console.log(expires);
-    console.log(name);
-    console.log(value);
-    document.cookie = name + "=" + value + ";" + 'expires=' + expires.toUTCString() + "; path=/";
-    console.log(document.cookie);
+    document.cookie = `${name} = ${value}; expires= + ${expires.toUTCString()}; path=/`;
 }
 
 if(!document.cookie.match(/^(.*;)?\s*newCookie\s*=\s*[^;]+(.*)?$/)) {
@@ -36,5 +32,3 @@ if(!document.cookie.match(/^(.*;)?\s*newCookie\s*=\s*[^;]+(.*)?$/)) {
     document.getElementById('opacity').classList.add('show');
     document.getElementById('scroll').classList.remove('scroll');
 }
-    
-
