@@ -7,7 +7,6 @@ const addDays = (date, days) => new Date(date.getTime() + days*MILISECONDS_IN_DA
 const setCookie = (name, value) => {
     const date = new Date();
     const expires = addDays(date, 1);
-    console.log(expires);
     document.cookie = `${name} = ${value}; expires= + ${expires.toUTCString()}; path=/`;
 }
 

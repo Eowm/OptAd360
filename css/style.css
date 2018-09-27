@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* .opa {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+* .opa .box {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 600px;
+  height: 300px;
+  text-align: center;
+  background-color: #969664;
+}
+
+* .opa .box h1 {
+  padding-top: 70px;
+}
+
+* .opa .box p {
+  padding: 40px 0;
+}
+
+* .opa .box button {
+  width: 150px;
+  height: 30px;
+  margin: 0 20px;
+}
+
+* .opa .box button:hover {
+  cursor: pointer;
+}
+
+* .background {
+  background-color: #969664;
+  text-align: center;
+}
+
+* .background h2 {
+  padding: 150px 100px;
+}
+
+* .background p {
+  padding: 40px 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: none;
+}
+
+.scroll {
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
